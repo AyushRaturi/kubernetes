@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  type: NodePort
+  selector:
+    app: nginx   # MUST match pod label
+  ports:
+    - protocol: TCP
+      port: 80 #cluster port 
+      targetPort: 8000 #service port to container port
+      nodePort: 30007 #port to access from outside of cluster, must be in range 30000-32767
+
