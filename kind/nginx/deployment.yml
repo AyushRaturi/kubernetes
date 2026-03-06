@@ -6,7 +6,7 @@ metadata:
   namespace: nginx
 
 spec:
-  replicas: 2
+  replicas: 2 #how many repicas should be have
 
   selector:
     matchLabels:
@@ -35,3 +35,4 @@ spec:
         - name: local-pvc-data
           persistentVolumeClaim:
             claimName: local-pvc
+
