@@ -6,7 +6,7 @@ apiVersion: v1
 
 metadata:
   # Name of the PersistentVolumeClaim
-  name: local-pvc
+  name: nginx-pvc
   namespace: nginx
   
 # Spec defines storage configuration
