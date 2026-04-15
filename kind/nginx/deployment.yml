@@ -27,12 +27,12 @@ spec:
 
           # Mount the PVC inside container
           volumeMounts:
-            - name: local-pvc-data   # Must match volume name
+            - name: nginx-pvc-data   # Must match volume name
               mountPath: /var/www/html
 
       # Volumes must be inside pod spec
       volumes:
-        - name: local-pvc-data
+        - name: nginx-pvc-data
           persistentVolumeClaim:
-            claimName: local-pvc
+            claimName: nginx-pvc
 
